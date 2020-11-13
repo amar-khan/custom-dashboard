@@ -1,0 +1,202 @@
+{
+  "builds": [
+    {
+      "ServiceName": "<b>ServiceName</b>",
+      "Region1": "<b>Region1</b>",
+      "Region2": "<b>Region2</b>",
+      "Available": "<b>Available</b>",
+      "DeployedOn": "<b>Last Deployment Date</b>"
+    },
+    {
+      "ServiceName": "<b>service-1</b>",
+      "Region1": "44",
+      "Region2": "44",
+      "Available": "44",
+      "DeployedOn": "Tue Jun 16 2020 08:36:44"
+    },
+    {
+      "ServiceName": "<b>service-2</b>",
+      "Region1": "17",
+      "Region2": "5",
+      "Available": "24",
+      "DeployedOn": "Fri Jun 05 2020 11:56:38"
+    },
+    {
+      "ServiceName": "<b>service-3</b>",
+      "Region1": "329",
+      "Region2": "327",
+      "Available": "329",
+      "DeployedOn": "Wed Aug 12 2020 08:36:18",
+      "PHCurrent": "329"
+    },
+    {
+      "ServiceName": "<b>service-4</b>",
+      "Region1": "2298",
+      "Region2": "2289",
+      "Available": "2298",
+      "DeployedOn": "Wed Aug 12 2020 08:34:33",
+      "PHCurrent": "2298"
+    },
+    {
+      "ServiceName": "<b>service-5</b>",
+      "Region1": "1391",
+      "Region2": "1385",
+      "Available": "1391",
+      "DeployedOn": "Wed Aug 12 2020 08:35:50",
+      "PHCurrent": "1391"
+    },
+    {
+      "ServiceName": "<b>service-6</b>",
+      "Region1": "310",
+      "Region2": "309",
+      "Available": "310",
+      "DeployedOn": "Fri Aug 07 2020 08:35:20"
+    },
+    {
+      "ServiceName": "<b>service-7</b>",
+      "Region1": "76",
+      "Region2": "76",
+      "Available": "76",
+      "DeployedOn": "Tue Aug 11 2020 15:35:10",
+      "PHCurrent": "77"
+    },
+    {
+      "ServiceName": "<b>service-8</b>",
+      "Region1": "43",
+      "Region2": "42",
+      "Available": "43",
+      "DeployedOn": "Wed Aug 12 2020 08:35:08",
+      "PHCurrent": "43"
+    },
+    {
+      "ServiceName": "<b>service-9</b>",
+      "Region1": "744",
+      "Region2": "741",
+      "Available": "742",
+      "DeployedOn": "Wed Aug 12 2020 01:37:04",
+      "PHCurrent": "744"
+    },
+    {
+      "ServiceName": "<b>service-10</b>",
+      "Region1": "824",
+      "Region2": "824",
+      "Available": "824",
+      "DeployedOn": "Fri Aug 07 2020 08:34:40"
+    },
+    {
+      "ServiceName": "<b>service-11</b>",
+      "Region1": "177",
+      "Region2": "101",
+      "Available": "177",
+      "DeployedOn": "Wed Aug 05 2020 13:13:44"
+    },
+    {
+      "ServiceName": "<b>service-12</b>",
+      "Region1": "164",
+      "Region2": "164",
+      "Available": "164",
+      "DeployedOn": "Mon Aug 10 2020 08:34:45"
+    },
+    {
+      "ServiceName": "<b>service-13</b>",
+      "Region1": "395",
+      "Region2": "393",
+      "Available": "395",
+      "DeployedOn": "Wed Aug 12 2020 08:35:53",
+      "PHCurrent": "395"
+    },
+    {
+      "ServiceName": "<b>service-14</b>",
+      "Region1": "366",
+      "Region2": "244",
+      "Available": "366",
+      "DeployedOn": "Wed Aug 12 2020 07:17:27"
+    },
+    {
+      "ServiceName": "<b>service-15</b>",
+      "Region1": "4336",
+      "Region2": "3690",
+      "Available": "4336",
+      "DeployedOn": "Wed Aug 12 2020 07:34:49"
+    },
+    {
+      "ServiceName": "<b>service-16</b>",
+      "Region1": "4105",
+      "Region2": "4099",
+      "Available": "4106",
+      "DeployedOn": "Wed Aug 12 2020 08:34:16",
+      "Current": "2061",
+      "PHCurrent": "4106"
+    },
+    {
+      "ServiceName": "<b>service-17</b>",
+      "Region1": "190",
+      "Region2": "91",
+      "Available": "190",
+      "DeployedOn": "Wed Aug 12 2020 07:15:12"
+    },
+    {
+      "ServiceName": "<b>service-18</b>",
+      "Region1": "22",
+      "Region2": "20",
+      "Available": "7",
+      "DeployedOn": "Tue Apr 28 2020 10:36:35"
+    },
+    {
+      "ServiceName": "<b>service-19</b>",
+      "Region1": "94",
+      "Region2": "94",
+      "Available": "94",
+      "DeployedOn": "Tue Jul 28 2020 15:36:56"
+    },
+    {
+      "ServiceName": "<b>service-20</b>",
+      "Region1": "NA",
+      "Region2": "NA",
+      "Available": "NA",
+      "DeployedOn": "Tue Jul 28 2020 15:36:56"
+    },
+    {
+      "ServiceName": "<b>service-21</b>",
+      "Region1": "NA",
+      "Region2": "NA",
+      "Available": "NA",
+      "DeployedOn": "Tue Jul 28 2020 15:36:56"
+    },
+    {
+      "ServiceName": "<b>service-22</b>",
+      "Region1": "NA",
+      "Region2": "NA",
+      "Available": "NA",
+      "DeployedOn": "Tue Jul 28 2020 15:36:56"
+    },
+    {
+      "ServiceName": "<b>service-23</b>",
+      "Region1": "NA",
+      "Region2": "NA",
+      "Available": "NA",
+      "DeployedOn": "Tue Jul 28 2020 15:36:56"
+    },
+    {
+      "ServiceName": "<b>service-24</b>",
+      "Region1": "NA",
+      "Region2": "NA",
+      "Available": "NA",
+      "DeployedOn": "Tue Jul 28 2020 15:36:56"
+    },
+    {
+      "ServiceName": "<b>service-25</b>",
+      "Region1": "NA",
+      "Region2": "NA",
+      "Available": "NA",
+      "DeployedOn": "Tue Jul 28 2020 15:36:56"
+    },
+    {
+      "ServiceName": "<b>service-26</b>",
+      "Region1": "NA",
+      "Region2": "NA",
+      "Available": "NA",
+      "DeployedOn": "Tue Jul 28 2020 15:36:56"
+    }
+  ]
+}

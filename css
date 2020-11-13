@@ -1,0 +1,23 @@
+#content {
+   background-color: maroon;
+   font-size: 0;
+   width: 500px;
+   height: 500px;
+   padding: 20px;
+}
+
+#left, #right {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 45%;
+    height: 100%;
+}
+
+#left {
+    background-color: blue;
+    margin-right: 50px;
+}
+
+#right {
+    background-color: green;
+}

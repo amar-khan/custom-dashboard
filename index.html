@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>
+        Internal Dashboard
+    </title>
+    <!-- <meta http-equiv="refresh" content="10" /> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        a:link {
+            color: red;
+        }
+
+        /* visited link */
+        a:visited {
+            color: green;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: hotpink;
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        h4 {
+            position: absolute;
+            left: 1300px;
+            top: 27px;
+        }
+
+        .qastyle {
+            top: 125px;
+            position: relative;
+            float: left;
+            width: 34%;
+            padding: 8px;
+            height: 36%;
+            display: none;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .prepordstyle {
+            top: 125px;
+            position: relative;
+            float: left;
+            width: 34%;
+            /* left: 32.5%; */
+            padding: 8px;
+            height: 36%;
+            display: none;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .prodstyle {
+            position: relative;
+            float: left;
+            width: 32%;
+            top: 125px;
+            /* left: 55.5%; */
+            padding: 8px;
+            height: 36%;
+            display: none;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .logo {
+            position: fixed;
+            top: 23px;
+            right: 81%;
+            float: right;
+            width: 18%;
+            padding: 0px;
+            height: 70px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .webname {
+            position: fixed;
+            top: 0px;
+            right: 79%;
+            float: right;
+            width: 18%;
+            padding: 0px;
+            height: 70px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .webnametwo {
+            position: fixed;
+            top: 0px;
+            right: 81%;
+            float: right;
+            width: 18%;
+            padding: 0px;
+            height: 70px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .linkx {
+            position: fixed;
+            top: 100px;
+            /* right: 81%; */
+            float: right;
+            width: 28%;
+            padding: 0px;
+            height: 70px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        .note {
+            position: fixed;
+            top: 78%;
+            right: 81%;
+            float: right;
+            width: 18%;
+            padding: 0px;
+            height: 70px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 1px;
+            border: solid 1px #0C0D0D;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-1-1 {
+            width: 12.00%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 28%;
+        }
+
+        .col-4 {
+            width: 30.33%;
+        }
+
+        .col-4-5 {
+            width: 35.66%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/jquery.miranda.js"></script>
+    <script>
+        var urlParams = window.location.hash.toString();
+
+        function QAFunction(event) {
+            window.location.href = "#qa"
+            var x = document.getElementById("qaboard");
+            var y = document.getElementById("preprodboard");
+            var z = document.getElementById("prodboard");
+
+            if (y !== null) {
+                y.style.display = "none";
+            }
+            if (z !== null) {
+                z.style.display = "none";
+            }
+            var linkAjax = ""
+            $("#qaboard").html('<div class="row"> <div class="col-3">[[ServiceName]]</div> <div class="col-1-1">[[Available]]</div><div class="col-1-1">[[Region1]]</div><div class="col-1-1">[[Region2]]</div><div class="col-4">[[DeployedOn]]</div></div>');
+
+            linkAjax = 'json-data/qa.json';
+            $("#peopleWork").mirandajs(linkAjax, {
+                containers: ['qaboard'],
+                jsonNode: ['builds'],
+                delay: 2000,
+                nodeDelay: 0
+            });
+            x.style.display = "block";
+
+        }
+        function PrepFunction() {
+            var x = document.getElementById("preprodboard");
+            var y = document.getElementById("qaboard");
+            var z = document.getElementById("prodboard");
+
+            if (y !== null) {
+                y.style.display = "none";
+            }
+            if (z !== null) {
+                z.style.display = "none";
+            }
+            $("#preprodboard").html('<div class="row"> <div class="col-3">[[ServiceName]]</div> <div class="col-1-1">[[Available]]</div><div class="col-1-1">[[Region1]]</div><div class="col-1-1">[[Region2]]</div><div class="col-4">[[DeployedOn]]</div></div>');
+            var linkAjax = 'json-data/preprod.json';
+
+            $("#peopleWork").mirandajs(linkAjax, {
+                containers: ['preprodboard'],
+                jsonNode: ['builds'],
+                delay: 2000,
+                nodeDelay: 0
+            });
+            x.style.display = "block";
+        }
+
+        function ProdFunction() {
+            var x = document.getElementById("prodboard");
+            var y = document.getElementById("preprodboard");
+            var z = document.getElementById("qaboard");
+
+            if (y !== null) {
+                y.style.display = "none";
+            }
+            if (z !== null) {
+                z.style.display = "none";
+            }
+            $("#prodboard").html('<div class="row"> <div class="col-3">[[ServiceName]]</div> <div class="col-1-1">[[Available]]</div><div class="col-1-1">[[Region1]]</div><div class="col-1-1">[[Region2]]</div><div class="col-4-5">[[DeployedOn]]</div></div>');
+            var linkAjax = 'json-data/production.json';
+
+            $("#peopleWork").mirandajs(linkAjax, {
+                containers: ['prodboard'],
+                jsonNode: ['builds'],
+                delay: 2000,
+                nodeDelay: 0
+            });
+            x.style.display = "block";
+        }
+
+
+        function allEnv() {
+            QAFunction()
+            PrepFunction()
+            ProdFunction()
+        }
+
+        window.onload = function () {
+            document.getElementById('qaboard').style.display = 'none';
+            document.getElementById('preprodboard').style.display = 'none';
+            document.getElementById('prodboard').style.display = 'none';
+            if (urlParams == "") {
+                window.location.href = "#qa"
+                QAFunction()
+            }
+
+            if (urlParams == "#qa") {
+                window.location.href = "#qa"
+                QAFunction()
+            }
+            if (urlParams == "#all") {
+                document.getElementById('preprodboard').style.display = 'block';
+                document.getElementById('prodboard').style.display = 'block';
+                document.getElementById('qaboard').style.display = 'block';
+                allEnv()
+            }
+            if (urlParams == "#preprod") {
+                window.location.href = "#preprod"
+                PrepFunction()
+            }
+            if (urlParams == "#prod") {
+                window.location.href = "#prod"
+                ProdFunction()
+            }
+        };
+
+    </script>
+</head>
+
+
+
+<body>
+    <div id="qaboard" style="background-color:#E2E9E9;" class="qastyle">
+        <div class="row">
+            <div class="col-3">[[ServiceName]]</div>
+            <div class="col-1-1">[[Available]]</div>
+            <div class="col-1-1">[[Region1]]</div>
+            <div class="col-1-1">[[Region2]]</div>
+            <div class="col-4">[[DeployedOn]]</div>
+            <!-- <div class="col-1">[[EC]]</div> -->
+        </div>
+    </div>
+
+
+    <div id="preprodboard" style="background-color:#A7E4E4;" class="prepordstyle">
+        <div class="row">
+            <div class="col-3">[[ServiceName]]</div>
+            <div class="col-1-1">[[Available]]</div>
+            <div class="col-1-1">[[Region1]]</div>
+            <div class="col-1-1">[[Region2]]</div>
+            <div class="col-4">[[DeployedOn]]</div>
+            <!-- <div class="col-1">[[EC]]</div> -->
+        </div>
+    </div>
+
+    <div id="prodboard" style="background-color:#CAF3AE;" class="prodstyle">
+        <div class="row">
+            <div class="col-3">[[ServiceName]]</div>
+            <div class="col-1-1">[[Available]]</div>
+            <div class="col-1-1">[[Region1]]</div>
+            <div class="col-1-1">[[Region2]]</div>
+            <div class="col-4-5">[[DeployedOn]]</div>
+            <!-- <div class="col-1">[[EC]]</div> -->
+        </div>
+    </div>
+
+    <div id="linkx" ; class="linkx">
+        <!-- <a href="#all" onclick="return allEnv()">All Enviornments</a> -->
+        <a class="fas fa-square" style="font-size:12px;color:rgb(248, 74, 21);" href="#all" onclick="return  allEnv();">
+            All Enviornments</a>
+        <a class="fas fa-square" style="font-size:12px;color:rgb(88, 88, 88);" href="#qa"
+            onclick="return  QAFunction(event);"> All QA</a>
+        <a class="fas fa-square" style="font-size:12px;color:rgb(53, 172, 172);" href="#preprod"
+            onclick="return  PrepFunction();"> All Preprod</a>
+        <a class="fas fa-square" style="font-size:12px;color:rgb(108, 161, 73);" href="#prod"
+            onclick="return  ProdFunction();"> All Production</a>
+    </div>
+    <div id="note" ; class="note">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </div>
+</body>
+
+</html>
