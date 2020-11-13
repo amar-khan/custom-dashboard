@@ -18,8 +18,7 @@ available, etc!
 
 ### Running dashboard Locally
 
-Clinet:
-
+#### Nginx Server Block:
 server {
     listen 80;
     listen [::]:80;
@@ -33,8 +32,6 @@ server {
        index  index.html index.htm;
    }
 }
-
-Server:
 
 pm2 start server.js
 
